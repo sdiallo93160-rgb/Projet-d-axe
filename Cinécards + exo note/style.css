@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* settings de base*/
+
+:root {
+    --base-color: #ffffff;
+    --base-variant: #ebe8e8;
+    --text-color: black;
+    --text-color: #ffffff;
+    --primary-color: rgb(45, 48, 50);
+    --accent-color: rgb(50, 74, 90);
+
+}
+
+/* dark mode*/
+
+.cta-button {
+    background-color: (var(--accent-color));
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 8em;
+    left: 50px;
+    z-index: 999;
+
+}
+
+#theme-switch img {
+    fill: var(--primary-color);
+}
+
+#theme-switch img:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch img:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch img:last-child {
+    display: block;
+}
+
+.darkmode {
+    --base-color: #1c1b1b;
+    --base-variant: #151414;
+    --text-color: rgb(255, 255, 255);
+    --primary-color: rgb(99, 103, 106);
+    --accent-color: rgb(50, 74, 90);
+}
+
+.darkmode .card {
+    background-color: #000000;
+}
+
+.darkmode .card-content h3 {
+    color: #ffffff;
+}
+
+.darkmode .card-content p {
+    color: #939090
+}
+
+
+/* settings de base body*/
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Poppins;
+
+}
+
+body {
+    padding: 1em;
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: Merriweather;
+
+}
+
+/*text header*/
+
+nav {
+    margin: 0 auto 3em auto;
+    width: min(1000%, 100%);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+
+}
+
+nav li:first-child {
+    margin-right: auto;
+    /* Mettre le cinécards de côté*/
+}
+
+nav a {
+    text-decoration: none;
+    color: (var(--base-color));
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header {
+    margin: 0 auto 2em;
+    width: min(100em, 100%);
+    color: #ffffff;
+    background-color: rgb(45, 48, 50);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+/* Bouton recherche*/
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: #ffffff;
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 400;
+}
+
+
+/* Catégories*/
+
+.part2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.button1 {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 3em;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: .60em 2em;
+    border-radius: .5em;
+    font-weight: 400;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    display: inline-block;
+    color: black;
+    background-color: rgb(78, 84, 87);
+    padding: 1em;
+    border-radius: 1em;
+    font-weight: 400;
+    word-spacing: 100px;
+}
+
+section a {
+
+    text-decoration: none;
+    color: #000000;
+    margin: 2em auto;
+    width: min(100em, 100%);
+    border-radius: 2em;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Cartes Collection*/
+
+* {
+    /*settings de base*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background-color: var(--base-color);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card {
+    width: 325px;
+    background-color: var(--base-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+
+}
+
+.card-content {
+    padding: 16px;
+}
+
+/*titre cartes*/
+
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: rgb(45, 48, 50);
+}
+
+/*texte dans les cartes*/
+
+.card-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/*ReadMore*/
+
+.card-content .button {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: rgb(45, 48, 50);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: var(--text-color);
+    font-size: 10px;
+}
+
+/*footer*/
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    border-radius: 5em;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+footer {
+    background-color: #666;
+    padding: 30px;
+
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h6 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: beige;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
